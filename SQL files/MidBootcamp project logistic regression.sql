@@ -1,4 +1,3 @@
-
 #1. Create a database called credit_card_classification.
 CREATE DATABASE IF NOT EXISTS  `credit_card_classification`;
 USE credit_card_classification;
@@ -164,7 +163,10 @@ WHERE
             credit_card_data);
 
 #14. What is the number of people who accepted the offer vs number of people who did not?
-Select count(Offer_Accepted = 'Yes') from credit_card_data;
+
+select Offer_Accepted, count(Offer_Accepted) 
+from credit_card_data
+group by Offer_Accepted;
 
 #15. Your managers are more interested in customers with a credit rating of high or medium. 
 -- What is the difference in average balances of the customers with high credit card rating and low credit card rating?
@@ -184,4 +186,13 @@ group by Mailer_Type;
 select * from credit_card_data
 order by Q1_Balance ASC
 limit 11;
+
+
+select * from credit_card_data
+where Customer_Number = 
+(select Customer_Number from
+(select *, ROW_NUMBER() OVER (ORDER BY Q1_Balance ASC) AS rownumber
+FROM credit_card_data
+order by Q1_Balance asc)s1
+where rownumber = 11);
 
