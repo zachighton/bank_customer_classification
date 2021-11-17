@@ -4,8 +4,7 @@
 - [Project Brief](#Project-Brief)
 - [Goals](#Goals)
 - [Process & Tools](#Process-&-Tools)
-- [Visualizations](#Visualizations)
-- [Key Take Aways](#Key-Take-Aways)
+- [Results](#Results)
 - [Next Steps](#Next-Steps)
 
 
@@ -64,10 +63,28 @@ The final stage was to model the data using various methods. We then evaluated t
 
 ## Results
 
-### Chi-Squared Analysis
+### Chi-Squared and Tableau Analysis
 
-Using a chi-squared analysis, we were able to perform a hypothesis test on all of the variables against offer acceptance. The below
+Using a chi-squared analysis, we were able to perform a hypothesis test on all of the variables against offer acceptance. The features shown below are those which we can say for sure do not have an insignificant impact on offer acceptance. Combining this with some analysis in Tableau, we can see the direction of this impact on offer acceptance.
 
+**Credit rating** (p-value 5.97e-97)
+- customers with a low credit rating should be more likely to accept a credit card offer.
+
+**Mailer type** (p-value 4.19e-39)
+- customers who recieve a postcard are significantly more likley to accept an offer as opposed to those who recieve a letter.
+
+**Income level** (p-value 1.46e-25)
+- customers with medium and high income levels are more likely to accept. Those with a high income level and unlikley to accept an offer.
+
+**Reward** (p-value 7.10e-23)
+- customers who receive 'air miles' are the most likely to accept a credit card offer followed by 'points' and finally those who recieve 'cash back' are the least likely to accept
+
+**Household size** (p-value 0.00046)
+- households with only 1 person are more likley to accept a credit card offer.
+
+### Models
+
+After designing several iterations of the models
 
 ## Next Steps
 
