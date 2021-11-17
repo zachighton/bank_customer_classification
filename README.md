@@ -84,7 +84,13 @@ Using a chi-squared analysis, we were able to perform a hypothesis test on all o
 
 ### Models
 
-After designing several iterations of the models
+The models we created are not particularly successful. The models are very good at predicting which customers won't accept creditcard offers (true negatives). However they predict rather poorly which customers are likely to accept the offer (true postives).
+
+After designing models using a variety of techniques, we came to the conclusion that each model has advantages and disadvantages. Therefore we chose to show 3 of two of the best models which could be used with different objectives in mind.
+
+#### Model 1 - Logistic Regression (using Smote and Tomek Links for sampling)
+
+
 
 ## Next Steps
 
