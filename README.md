@@ -83,9 +83,6 @@ Using a chi-squared analysis, we were able to perform a hypothesis test on all o
 **Reward** (p-value 7.10e-23)
 - customers who receive 'air miles' are the most likely to accept a credit card offer followed by 'points' and finally those who recieve 'cash back' are the least likely to accept
 
-**Household size** (p-value 0.00046)
-- households with only 1 person are more likley to accept a credit card offer.
-
 ### Models
 
 The models we created are not particularly successful. The models are very good at predicting which customers won't accept creditcard offers (true negatives). However they predict rather poorly which customers are likely to accept the offer (true postives).
@@ -98,7 +95,7 @@ This model achieves and accuracy of ... and an AUC score of ... . This model is 
 This model is best used if mis-identifying customers who will accept an offer is not **ascosiated** with high costs.
 
 
-#### Model 2 - Decision Tree (using Smote and Tomek Links for sampling)
+#### Model 2 - Random Forest (using Smote and Tomek Links for sampling)
 This model achieves and accuracy of ... and an AUC score of ... . This model is less effective at identifying customers who will accept a credit card offer (true positives). However, it has a lower false positive rate.
 
 This model would be best used in a situation where a high cost is ascociated with mis-asigning customers who will not accept credit cards.
