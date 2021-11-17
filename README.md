@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [Project Brief](#Project-Brief)
-- [Defining the Problem](#Defining-the-Problem)
+- [Goals](#Goals)
 - [Process & Tools](#Process-&-Tools)
 - [Visualizations](#Visualizations)
 - [Key Take Aways](#Key-Take-Aways)
@@ -16,13 +16,12 @@ We are working as a risk analysts with a bank. Apart from the other banking and 
 Usually, the observational data for these kinds of problems is somewhat limited in that often the company sees only those who respond to an offer. To get around this, the bank designs a focused marketing study, with 18,000 current bank customers. This focused approach allows the bank to know who does and does not respond to the offer, and to use existing demographic data that is already available on each customer.
 
 
-## Defining the Problem
+## Goals
 
-In order to tackle this issue, we had come up with a way of defining 'good' and 'bad' customers. We decided to define this using the 'Status' column within the data.
+Our main goals for the project are as follows:
 
-'Good' customers would have statuses of A: 'contract finished, no problems' or C: 'running contract, OK so far'. 
-
-'Bad' customers would be have statuses of B: 'contract finished, loan not payed' or D: 'running contract, client in debt'.
+- Identify the demographics and charateristics which most influece creditcard offer acceptance.
+- Create a model to predict which customers are likely to accept an offer.
 
 
 ## Process & Tools
@@ -33,50 +32,42 @@ The project was stored and updated via github.
 
 ### SQL
 
-We started by accessing the bank data in SQL by running a [script](https://github.com/zachighton/example_layout/blob/main/SQL%20Files/bank_sql_dump_script.sql). Then wrote a [query](https://github.com/zachighton/example_layout/blob/main/SQL%20Files/bank_sql_query.sql) to access the relevant features which we would then use for the analysis.
+We accessed the data in SQL in order to perform some preliminary analysis - link.
+
+### Tableau
+
+We used Tableau for some exploratory analysis which can be found - link. We also used it to create an interactive dashboard to display some findings of the analysis.
 
 ### Python
 
 **Import:**
 
-We then imported the data into python to begin exploratory analysis. The link to the jupyter notebook can be found [here](https://github.com/zachighton/example_layout/blob/main/Juptyer%20Files/log_regression_bank.ipynb).
+We then imported the data into python to begin exploratory analysis. The link to the jupyter notebook can be found [here] - link.
 
 **Cleaning:**
 
 The next step was to clean the data. This included:
-- simplifying and combining columns
-- correcting for typos
-- filling in blanks with 'unknown'
-- removing null values
-- changing data types (some numerical data was better processed as objects)
+- normalising column names
+- dropping unneccesary columns
+- filling in nulls with average values
+- changing data types (some numerical columns were better processed as objects)
 
-**Normalisation:**
+**Exploratory Analysis:**
 
-Once this was complete, we moved on to normalising the data so that it could be better processed by the model.
+We then investigated the data further. This included:
+- checking for multicolinearity with a heatmap
+- performing a chi-squared analysis, the results of which are discussed below
 
 **Modelling:**
 
-The final stage was to model the data using logistic regression. We then evaluated the model using various metrics to assess how well it was able to categorise customers.
+The final stage was to model the data using various methods. We then evaluated the model using different metrics to assess how well it was able to predict offer acceptance.
 
-## Visualizations
+## Results
 
-<img width="400" alt="Screenshot 2021-11-10 at 17 07 19" src="https://user-images.githubusercontent.com/89530964/141149155-d1e85682-f494-4696-aa82-d7e9dd15cd95.png">
+### Chi-Squared Analysis
 
+Using a chi-squared analysis, we were able to perform a hypothesis test on all of the variables against offer acceptance. The below
 
-<img width="400" alt="Screenshot 2021-11-10 at 17 06 34" src="https://user-images.githubusercontent.com/89530964/141149037-2a2d5e27-bcd7-4e48-8f4b-750ebdbf0d50.png">
-
-
-The above images show a confusion matrix and AUC plot for the regression model we performed on the data. We discuss their implications below.
-
-## Key Take Aways
-
-With the data we currently have access to, we were  not able to accurately predict whether customers were 'good' or 'bad' for the bank.
-
-Using the accuracy_score metric from sklearn, the model achieved a score of 88%. This appears to be a good result. However, when we look at the confusion matrix, we can see that although the model is good at predicting 'good' customers, it also often misassigns 'bad' customers as 'good' customers (a false positive).
-
-This is reflected in the AUC score of 73%, which although not a very bad score, shows that there is room for improvement.
-
-The issue here appears to be that since there are many more 'good' customers at the bank than 'bad' customers, the model is over prioritising that group.
 
 ## Next Steps
 
