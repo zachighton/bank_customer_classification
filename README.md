@@ -89,11 +89,16 @@ The models we created are not particularly successful. The models are very good 
 After designing models using a variety of techniques, we came to the conclusion that each model has advantages and disadvantages. Therefore we chose to show 3 of two of the best models which could be used with different objectives in mind.
 
 #### Model 1 - Logistic Regression (using Smote and Tomek Links for sampling)
+This model achieves and accuracy of ... and an AUC score of ... . This model is relatively effective at identifying customers who will accept a credit card offer (true positives). However, it has a high false positive rate.
+
+This model is best used if mis-identifying customers who will accept an offer is not **ascosiated** with high costs.
 
 
+#### Model 2 - Decision Tree (using Smote and Tomek Links for sampling)
+This model achieves and accuracy of ... and an AUC score of ... . This model is less effective at identifying customers who will accept a credit card offer (true positives). However, it has a lower false positive rate.
+
+This model would be best used in a situation where a high cost is ascociated with mis-asigning customers who will not accept credit cards.
 
 ## Next Steps
 
-The obvious next step would be to re-run the model having done some sampling techniques. If we were to over or under sample from the original data to even out the number of 'good' and 'bad' customers that the model recieves, we may be able to get fewer false negatives.
-
-Having access to more data on the customers of the bank would also lead to a more accurate model.
+To further progress this study it would be useful to collect more information on customers...
