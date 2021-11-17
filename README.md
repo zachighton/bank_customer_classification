@@ -25,6 +25,10 @@ Our main goals for the project are as follows:
 
 ## Process & Tools
 
+### Trello
+
+We used Trello to organise and team manage the project. We created epics and broke those down into stories which were then further broken into individual tasks to complete.
+
 ### Github
 
 The project was stored and updated via github.
