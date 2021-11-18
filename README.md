@@ -33,19 +33,23 @@ We used Trello to organise the project. We created epics and broke those down in
 
 The project was stored and updated via Github. This allowed us to easily share the project over multiple devices and sync changes.
 
+### Slides.com
+
+We used slides.com to create a presentation which can be accessed at this [link](https://slides.com/zachighton/deck).
+
 ### SQL
 
-We accessed the data in SQL in order to perform some preliminary analysis - link.
+We accessed the data in SQL in order to perform some [preliminary analysis](https://github.com/zachighton/mid_bootcamp_classification_project/blob/main/SQL%20Files/classification_project_final.sql).
 
 ### Tableau
 
-We used Tableau for some exploratory analysis which can be found here - link. We also used it to create an interactive dashboard to display some findings of the analysis.
+We used Tableau for some exploratory analysis which can be found [here](https://github.com/zachighton/mid_bootcamp_classification_project/blob/main/Tableau%20Files/classification_questions.twbx). We also used it to create an [interactive dashboard](https://github.com/zachighton/mid_bootcamp_classification_project/blob/main/Tableau%20Files/classification_dashboard.twbx) to display some findings of the analysis.
 
 ### Python
 
 **Import:**
 
-We then imported the data into Python to begin exploring the data. The link to the jupyter notebook can be found [here] - link.
+We then imported the data into Python to begin exploring the data. The link to the jupyter notebook can be found [here](https://github.com/zachighton/mid_bootcamp_classification_project/blob/main/Python%20Files/classification_project_final.ipynb).
 
 **Cleaning:**
 
