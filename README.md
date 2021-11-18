@@ -105,4 +105,4 @@ This model is therefore best for higher cost initiatives. If the bank wanted to 
 
 ## Next Steps
 
-To further progress this study it would be useful to collect more information on customers...
+To further progress this study and increase the accuracy of both models, it would be useful to collect more demographic information on the customers such as maritial status or employment status. Furthermore, knowing more about which customers live in the same residence by having a household_id would be helpful to further refine our 'capita' column. Lastly, having specific information on customers' income we think would greatly benefit the models.
