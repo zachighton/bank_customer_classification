@@ -3,7 +3,7 @@
 ## Table of Contents
 - [Project Brief](#Project-Brief)
 - [Goals](#Goals)
-- [Process and Tools](#Process-&-Tools)
+- [Process and Tools](#Process-and-Tools)
 - [Results](#Results)
 - [Next Steps](#Next-Steps)
 
@@ -21,7 +21,7 @@ Our main goals for the project were as follows:
 - Create a model to predict which customers are likely to accept an offer.
 
 
-## Process & Tools
+## Process and Tools
 
 ### Trello
 
