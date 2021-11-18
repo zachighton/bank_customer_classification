@@ -7,7 +7,6 @@
 - [Results](#Results)
 - [Next Steps](#Next-Steps)
 
-
 ## Project Brief
 
 We are working as a risk analysts with a bank. Apart from the other banking and loan services, the bank also provides credit card services which are a very important source of revenue. The bank wants to understand the demographics and other characteristics of its customers that accept a credit card offer and that do not accept a credit card.
