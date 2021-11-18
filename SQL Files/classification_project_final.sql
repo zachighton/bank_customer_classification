@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `credit_card_data` (
  -- Used the table import wizard for this operation 
  
  #4. Select all the data from table credit_card_data to check if the data was imported correctly.
- SELECT 
+SELECT 
     *
 FROM
     credit_card_data;
@@ -37,7 +37,9 @@ FROM
  #5. Use the alter table command to drop the column q4_balance from the database, 
  -- as we would not use it in the analysis with SQL. 
  -- Select all the data from the table to verify if the command worked. Limit your returned results to 10.
+
 ALTER TABLE `credit_card_data` DROP `Q4_Balance`;
+
 SELECT 
     *
 FROM
@@ -53,6 +55,7 @@ FROM
 
 #7. Now we will try to find the unique values in some of the categorical columns:
 -- What are the unique values in the column Offer_accepted?
+
 SELECT DISTINCT
     (Offer_accepted)
 FROM
@@ -84,7 +87,8 @@ FROM
  
  #8. Arrange the data in a decreasing order by the average_balance of the house. 
  -- Return only the customer_number of the top 10 customers with the highest average_balances in your data.
- SELECT 
+ 
+SELECT 
     Customer_number
 FROM
     credit_card_data
@@ -93,7 +97,7 @@ LIMIT 10;
  
  
  #9. What is the average balance of all the customers in your data?
- SELECT 
+SELECT 
     ROUND(AVG(Average_Balance), 2) AS Total_Avg_balance
 FROM
     credit_card_data;
@@ -104,6 +108,7 @@ FROM
   #The returned result should have only two columns, 
    #income level and Average balance of the customers. 
    #Use an alias to change the name of the second column.
+
 SELECT 
     Income_Level, ROUND(AVG(Average_Balance), 2) AS Avg_Balance
 FROM
@@ -115,6 +120,7 @@ GROUP BY Income_Level;
    #The returned result should have only two columns, 
    #number_of_bank_accounts_open and Average balance of the customers. 
    #Use an alias to change the name of the second column.
+   
 SELECT 
     Bank_Accounts_Open,
     ROUND(AVG(Average_Balance), 2) AS Avg_Balance
@@ -126,15 +132,17 @@ GROUP BY Bank_Accounts_Open;
 -- What is the average number of credit cards held by customers for each of the credit card ratings? 
    #The returned result should have only two columns, rating and average number of credit cards held. 
    #Use an alias to change the name of the second column.
+   
 SELECT 
     Credit_Rating AS Rating,
-    AVG(No_Credit_Cards_Held) AS avg_no_cc_held
+    ROUND(AVG(No_Credit_Cards_Held), 2) AS avg_no_cc_held
 FROM
     credit_card_data
 GROUP BY Credit_Rating;
 
 -- Is there any correlation between the columns credit_cards_held and number_of_bank_accounts_open? 
    #You can analyse this by grouping the data by one of the variables and then aggregating the results of the other column.
+ 
  SELECT 
     No_Credit_Cards_Held, COUNT(Bank_Accounts_Open)
 FROM
@@ -144,7 +152,8 @@ ORDER BY COUNT(Bank_Accounts_Open);
    
 -- Visually check if there is a positive correlation 
 #or negative correlation or no correlation between the variables.
- SELECT 
+ 
+SELECT 
     No_Credit_Cards_Held, COUNT(Bank_Accounts_Open)
 FROM
     credit_card_data
@@ -183,6 +192,7 @@ WHERE
 -- the average balance of all the customers in the database. 
 -- Write a query to show them the list of such customers. 
 -- You might need to use a subquery for this problem. 
+
 SELECT 
     Customer_Number, Average_Balance
 FROM
@@ -210,7 +220,7 @@ CREATE VIEW Less_than_Avg_Bal AS
 #14. What is the number of people who accepted the offer vs number of people who did not?
 
 SELECT 
-    Offer_Accepted, COUNT(Offer_Accepted)
+    Offer_Accepted, COUNT(Offer_Accepted) AS No_Clients
 FROM
     credit_card_data
 GROUP BY Offer_Accepted;
@@ -218,30 +228,29 @@ GROUP BY Offer_Accepted;
 #15. Your managers are more interested in customers with a credit rating of high or medium. 
 -- What is the difference in average balances of the customers with high credit card rating and low credit card rating?
 SELECT 
-    Credit_Rating, ROUND(AVG(Average_Balance), 2)
+    Credit_Rating, ROUND(AVG(Average_Balance), 2) as Avg_Balance
 FROM
     credit_card_data
 WHERE
-    Credit_Rating IN ('medium' , 'high')
-GROUP BY Credit_Rating
-;
+    Credit_Rating IN ('low' , 'high')
+GROUP BY Credit_Rating;
 
 
 #16. In the database, which all types of communication (mailer_type) were used and with how many customers?
 SELECT DISTINCT
     (Mailer_Type) AS Mailer_Type,
-    COUNT(Customer_Number) AS No_Of_Customers
+    COUNT(Customer_Number) AS No_Of_Clients
 FROM
     credit_card_data
 GROUP BY Mailer_Type;
 
 
 #17. Provide the details of the customer that is the 11th least Q1_balance in your database.
-select * from credit_card_data
-where Customer_Number = 
-(select Customer_Number from
-(select *, ROW_NUMBER() OVER (ORDER BY Q1_Balance ASC) AS rownumber
+SELECT * FROM credit_card_data
+WHERE Customer_Number = 
+(SELECT Customer_Number FROM
+(SELECT *, ROW_NUMBER() OVER (ORDER BY Q1_Balance ASC) AS rownumber
 FROM credit_card_data
-order by Q1_Balance asc)s1
-where rownumber = 11);
+ORDER BY Q1_Balance)s1
+WHERE rownumber = 11);
 
