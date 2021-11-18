@@ -1,5 +1,8 @@
 # Ironhack Mid-Bootcamp Project - Bank Case Study
 
+![Classification ReadMe Image](https://user-images.githubusercontent.com/89530964/142450491-c250247f-f967-4ae7-abe5-45777f2b2287.png)
+
+
 ## Table of Contents
 - [Project Brief](#Project-Brief)
 - [Goals](#Goals)
