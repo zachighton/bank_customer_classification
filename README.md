@@ -3,7 +3,7 @@
 ## Table of Contents
 - [Project Brief](#Project-Brief)
 - [Goals](#Goals)
-- [Process & Tools](#Process-&-Tools)
+- [Process-&-Tools](#Process-&-Tools)
 - [Results](#Results)
 - [Next Steps](#Next-Steps)
 
