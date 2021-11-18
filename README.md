@@ -27,7 +27,7 @@ Our main goals for the project were as follows:
 
 ### Trello
 
-We used Trello to organise the project. We created epics and broke those down into stories which were then further broken into individual tasks to complete. To be able to follow the steps we took in the project follow this **link**.
+We used Trello to organise the project. We created epics and broke those down into stories which were then further broken into individual tasks to complete. To be able to follow the steps we took in the project follow this [link](https://trello.com/invite/b/OF4jI4hQ/f23e9f9423d59691832cc097264e6adc/bootcamp-project).
 
 ### Github
 
@@ -43,7 +43,7 @@ We accessed the data in SQL in order to perform some [preliminary analysis](http
 
 ### Tableau
 
-We used Tableau for some exploratory analysis which can be found [here](https://github.com/zachighton/mid_bootcamp_classification_project/blob/main/Tableau%20Files/classification_questions.twbx). We also used it to create an [interactive dashboard](https://github.com/zachighton/mid_bootcamp_classification_project/blob/main/Tableau%20Files/classification_dashboard.twbx) to display some findings of the analysis.
+We used Tableau for some exploratory analysis which can be found [here](https://public.tableau.com/app/profile/kofi.ampomah/viz/classificationquestions_16372232549360/Imbalance). We also used it to create an [interactive dashboard](https://public.tableau.com/app/profile/zac.highton/viz/classificationdashboard/Dashboard1) to display some findings of the analysis.
 
 ### Python
 
