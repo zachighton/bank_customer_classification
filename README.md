@@ -90,16 +90,17 @@ Both models have a limited ability to predict offer acceptance. They are very go
 #### Model 1 - Logistic Regression (using Smote and Tomek Links for sampling)
 This model achieves an accuracy of 76%. It is relatively effective at identifying customers who will accept a credit card offer (true positives). However, it has a high false positive rate. This means that we will target more customers incorrectly, but overall reach more customers who will accept the credit card offer.
 
-We think that this model is best used for low cost initiatives. If there is not a high cost associated with targeting customers identified with the model, then we can reach the most customers who are likely to accept a credit card with this model. 
+We think that this model is best used for low cost initiatives. If there is not a high cost associated with targeting customers identified with the model, then we can reach the most customers who are likely to accept a credit card with this model.
 
-Confusion matrix:
+<img width="400" alt="Random Forest" src="https://user-images.githubusercontent.com/89530964/142390590-a1139fd7-a8e6-4c8b-b3b5-073decf029f2.png">
+
 
 #### Model 2 - Random Forest (using Smote and Tomek Links for sampling)
 Model 2 achieves an accuracy of ... . It is less effective than the first model at identifying customers who will accept a credit card offer (true positives). However, it has a lower false positive rate. That means that we will target fewer customers incorrectly, but overall reach fewer customers who would accept the offer.
 
 This model is therefore best for higher cost initiatives. If the bank wanted to target fewer customers but still be sure to target some who are likely to accept the offer, this model would be more effective.
 
-Confusion matrix:
+<img width="400" alt="Logistic Regression" src="https://user-images.githubusercontent.com/89530964/142390735-aadc0823-e892-458e-8be9-5b003fcda58b.png">
 
 ## Next Steps
 
