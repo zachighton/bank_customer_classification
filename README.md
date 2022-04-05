@@ -79,10 +79,10 @@ Using a chi-squared analysis, we performed a hypothesis test on all of the varia
 - Customers with a low credit rating are more likely to accept a credit card offer.
 
 **Mailer type** (p-value 4.19e-39)
-- Customers who recieve a postcard are more likley to accept an offer as opposed to those who recieve a letter.
+- Customers who recieve a postcard are more likely to accept an offer as opposed to those who recieve a letter.
 
 **Income level** (p-value 1.46e-25)
-- Customers with medium and high income levels are more likely to accept the credit card. Those with a low income level are unlikley to accept an offer.
+- Customers with medium and high income levels are more likely to accept the credit card. Those with a low income level are unlikely to accept an offer.
 
 **Reward** (p-value 7.10e-23)
 - Customers who receive 'air miles' are the most likely to accept the offer, followed by those who recieved 'points' and finally those who recieve 'cash back' are the least likely to accept.
